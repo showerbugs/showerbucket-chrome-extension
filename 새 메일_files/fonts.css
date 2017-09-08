@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/fonts/NotoSansJP-Light.woff2) format("woff2"), url(/assets/fonts/NotoSansJP-Light.woff) format("woff"), url(/assets/fonts/NotoSansJP-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/NotoSansJP-Regular.woff2) format("woff2"), url(/assets/fonts/NotoSansJP-Regular.woff) format("woff"), url(/assets/fonts/NotoSansJP-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/NotoSansJP-Medium.woff2) format("woff2"), url(/assets/fonts/NotoSansJP-Medium.woff) format("woff"), url(/assets/fonts/NotoSansJP-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/NotoSansJP-Bold.woff2) format("woff2"), url(/assets/fonts/NotoSansJP-Bold.woff) format("woff"), url(/assets/fonts/NotoSansJP-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/NanumGothic-Regular.eot), url(/assets/fonts/NanumGothic-Regular.woff2) format("woff2"), url(/assets/fonts/NanumGothic-Regular.woff) format("woff"), url(/assets/fonts/NanumGothic-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/NanumGothic-Bold.eot), url(/assets/fonts/NanumGothic-Bold.woff2) format("woff2"), url(/assets/fonts/NanumGothic-Bold.woff) format("woff"), url(/assets/fonts/NanumGothic-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(/assets/fonts/NanumGothic-ExtraBold.eot), url(/assets/fonts/NanumGothic-ExtraBold.woff2) format("woff2"), url(/assets/fonts/NanumGothic-ExtraBold.woff) format("woff"), url(/assets/fonts/NanumGothic-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/NanumBarunGothic.eot), url(/assets/fonts/NanumBarunGothic.woff2) format("woff2"), url(/assets/fonts/NanumBarunGothic.woff) format("woff"), url(/assets/fonts/NanumBarunGothic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/assets/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/assets/fonts/MaterialIcons-Regular.woff) format("woff"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,89 @@
+@media print {
+  * {
+    overflow: visible !important;
+  }
+  .commonview {
+    background-color: #fff !important;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+  }
+  .full-view-modal {
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .full-view-modal .modal-dialog {
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+  .divide-right-view,
+  .full-view-modal .modal-body,
+  .main-content > .primary {
+    width: 100% !important;
+  }
+  header,
+  footer,
+  .divide-left-navi,
+  .vertical-divider,
+  .local-navi-bar,
+  .common-list,
+  .list-content,
+  .detail-header,
+  .box-header-wrapper,
+  .dooray-comment-writeform,
+  .subpost-header,
+  .subpost-list-wrapper,
+  .attach-files,
+  .parent-task-number,
+  .setting-modal.commonview,
+  .list-box-title,
+  .list-box-title-wrapper,
+  .project-description-wrapper,
+  .full-view-divider-wrapper,
+  .full-view-modal .modal-header,
+  .box-header-right-content,
+  mx-record-confirm-notice {
+    display: none !important;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  [mail-resize-divider],
+  .full-view-divider,
+  mail-navi,
+  mail-contents-layout > header,
+  .divide-left-view,
+  .main-contents-body.full-list {
+    display: none !important;
+  }
+  .stream-modal {
+    position: relative !important;
+  }
+  .stream-modal ~ #main-wrapper,
+  .stream-modal stream-list {
+    display: none !important;
+  }
+  .stream-modal .modal-content {
+    border: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .stream-modal .modal-dialog {
+    margin: 0 !important;
+  }
+  .stream-modal .stream-view {
+    left: 0 !important;
+    top: 0 !important;
+    background-color: #fff !important;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    position: absolute !important;
+    border: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=print.css.map */

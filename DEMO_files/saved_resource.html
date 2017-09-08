@@ -1,0 +1,143 @@
+
+<!-- saved from url=(0257)https://prezi.com/embed/1cn6ucikwqq_/?bgcolor=ffffff&lock_to_path=0&autoplay=0&autohide_ctrls=0&landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI5N1lQVHkxSHFxazZ0UUNCRHloSXZROHh3PT0&landing_sign=1kD6c0N6aYpMUS0wxnQjxzSqZlEB8qNFdxtdjYhwSuI -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./805ec5ece8"></script><script src="./nr-1026.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"805ec5ece8","agent":"","transactionName":"ZFRaYkFUWEFYAUFbXl0efkNdVkJbVgwaXlBdVVFYVFFcU1cFWhxXX1BLXmxWWVxNA1xcVEFuTl9WQgxbXxBUX1Q=","applicationID":"14028923","errorBeacon":"bam.nr-data.net","applicationTime":99}</script>
+        <title>프레지란?</title>
+
+        <script type="text/javascript">
+            var pageStartTime = Date.now();
+        </script>
+
+        <link rel="stylesheet" href="./b1a9d4f7a194.css" type="text/css">
+
+
+        <script type="text/javascript" src="./a08a0f084164.js"></script>
+
+    <script src="./viewer-loader.js" crossorigin="anonymous"></script></head>
+    <body>
+
+
+    <!-- iframe_container_webgl -->
+    <div id="prezi-viewer">
+        <div id="container">
+            
+
+
+
+    <div id="min_flash_alert" class="flash_messaging" style="display: none;">
+        <div class="alert alert-error">
+            프레지는 플래시 플레이어 11.1 혹은 이후 버전이 필요합니다. <a href="http://get.adobe.com/flashplayer/" target="blank_">여기</a>에서 업그레이드하세요. 
+        </div>
+        <h2>프레지 웹 뷰어를 이용하시려면 플래시를 허용하세요.</h2>
+        <div class="row">
+            <div class="col-xs-4 step-block">
+                <h3 class="title-circle"><span>1</span></h3>
+                <div class="image-container">
+                    <a href="http://get.adobe.com/flashplayer/" target="_blank"><img class="step-image" src="./screenshot1_ko-chrome@2x.png"></a>
+                    <div class="explanation">
+                        클릭 <strong>"지금 업그레이드하기"</strong>
+                        <br>
+                        <small>플래시가 설치되어 있지 않은 경우 다운로드하여 설치할 수 있습니다.</small>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="col-xs-4 step-block">
+                    <h3 class="title-circle"><span>2</span></h3>
+                    <div class="image-container">
+                        <img class="step-image" src="./screenshot2_ko-chrome@2x.png">
+                        <div class="explanation">클릭 <strong>“허용”</strong> .</div>
+                    </div>
+                </div>
+            
+            <div class="col-xs-4 step-block">
+                <h3 class="title-circle"><span>3</span></h3>
+                <div class="image-container">
+                    <img class="step-image" src="./screenshot3-chrome@2x.png">
+                    <div class="explanation">플래시가 허용되면 <strong>프레지가 로딩됩니다.</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+
+        <div id="webgl-viewer-app-container"><div data-reactroot="" id="webgl-viewer-app" class="webgl-viewer-app"><div class="webgl-viewer-embed-splash-screen"><div class="webgl-viewer-embed-splash-screen-overlay"><div class="webgl-viewer-embed-splash-screen-summary"><div class="webgl-viewer-embed-splash-screen-summary-title"><a href="https://prezi.com/1cn6ucikwqq_/" target="_blank">프레지란?</a><span class="webgl-viewer-embed-splash-screen-summary-owner"><!-- react-text: 8 -->제작 프레지 코리아<!-- /react-text --><span class="webgl-viewer-embed-splash-screen-summary-last-modified">최종 편집: 1년,7개월 전</span></span></div><div class="webgl-viewer-embed-splash-screen-summary-description">청중이 집중하는 짜릿한 느낌. 프레지로 경험해 보세요!</div></div><div class="webgl-viewer-embed-center-container"><button><div class="webgl-viewer-embed-present-icon"></div><div class="webgl-viewer-embed-present-text">감상하기</div></button></div></div><div class="webgl-viewer-embed-splash-screen-thumbnail" style="background-image: url(&quot;https://0901.static.prezi.com/preview/v2/a3w6rratnb4snr6wgussi7o4ep6jc3sachvcdoaizecfr3dnitcq_1_0.png&quot;);"></div></div><span></span></div></div>
+    </div>
+
+    <script>
+
+        if (window.onunload == null) {
+            window.onunload = function() {}; // preventing forward-backward caching
+        }
+
+        // App init
+
+        webglViewerApp.Main.subscribeViewerStatus(function(status){
+            try {
+                // this works only if in internal iframe
+                parent.onEditorLoadPhaseEnd(window, status);
+            } catch (e) {
+                // do nothing, probably external embed
+            }
+        });
+
+        webglViewerApp.Main.subscribeToFallbackToFlash(function() {
+           if (EmbedPrezi && EmbedPrezi.fallbackToFlash) {
+               EmbedPrezi.fallbackToFlash();
+           }
+        });
+
+        var appData = JSON.parse('{\u0022sentry_dsn\u0022: \u0022https://02838adcbf824100a0920e77cb69d19b@sentry.io/104337\u0022, \u0022localizedMessages\u0022: {\u0022modifiedAt\u0022: \u0022\u005Cucd5c\u005Cuc885 \u005Cud3b8\u005Cuc9d1: %(date)s\u0022, \u0022createdBy\u0022: \u0022\u005Cuc81c\u005Cuc791 %(name)s\u0022, \u0022autoplayStart\u0022: \u0022 %(interval)s \u005Cucd08 \u005Cuac04\u005Cuaca9\u005Cuc73c\u005Cub85c \u005Cuc790\u005Cub3d9\u005Cuc7ac\u005Cuc0dd\u0022, \u0022freeDragMessage\u0022: \u0022\u005Cud654\u005Cuba74\u005Cuc744 \u005Cud074\u005Cub9ad, \u005Cub4dc\u005Cub798\u005Cuadf8\u005Cud558\u005Cuc5ec \u005Cuc6d0\u005Cud558\u005Cub294 \u005Cuacf3\u005Cuc73c\u005Cub85c \u005Cuc774\u005Cub3d9\u005Cud560 \u005Cuc218 \u005Cuc788\u005Cuc2b5\u005Cub2c8\u005Cub2e4.\u0022, \u0022autoplayStop\u0022: \u0022\u005Cuc790\u005Cub3d9\u005Cuc7ac\u005Cuc0dd \u005Cuc911\u005Cuc9c0\u0022, \u0022loadingContent\u0022: \u0022\u005Cucf58\u005Cud150\u005Cuce20 \u005Cub85c\u005Cub529 \u005Cuc911...\u0022, \u0022present\u0022: \u0022\u005Cuac10\u005Cuc0c1\u005Cud558\u005Cuae30\u0022, \u0022pechaKuchaGo\u0022: \u0022Pecha Kucha go!\u0022}, \u0022viewerJsPrefix\u0022: \u0022https://d3l6c3sl8nwl6g.cloudfront.net/5.3.3\u002Dbuild_41/e732972f/\u0022, \u0022webglViewerVersion\u0022: \u00225.3.3\u002Dbuild_41/e732972f\u0022, \u0022debugLogInConsole\u0022: false, \u0022logApiEndpoint\u0022: \u0022//prezi.com\u0022, \u0022autofallbackToFlash\u0022: true, \u0022fullUiEnabled\u0022: false, \u0022guestUserVisit\u0022: true, \u0022embedMode\u0022: true, \u0022environment\u0022: \u0022production\u0022, \u0022showWatermark\u0022: false, \u0022isPromoOverlayAvailable\u0022: false}');
+        appData['pageStartTime'] = pageStartTime;
+        appData['isProduction'] = window.location.host.indexOf("preprod") == -1 && window.location.host.indexOf("localhost") == -1;
+
+        webglViewerApp.Main.setData(
+            JSON.parse('{\u0022thumbnailUrl\u0022: \u0022https://0901.static.prezi.com/preview/v2/a3w6rratnb4snr6wgussi7o4ep6jc3sachvcdoaizecfr3dnitcq_1_0.png\u0022, \u0022modifiedAt\u0022: \u00221\u005Cub144,7\u005Cuac1c\u005Cuc6d4 \u005Cuc804\u0022, \u0022description\u0022: \u0022\u005Cuccad\u005Cuc911\u005Cuc774 \u005Cuc9d1\u005Cuc911\u005Cud558\u005Cub294 \u005Cuc9dc\u005Cub9bf\u005Cud55c \u005Cub290\u005Cub08c. \u005Cud504\u005Cub808\u005Cuc9c0\u005Cub85c \u005Cuacbd\u005Cud5d8\u005Cud574 \u005Cubcf4\u005Cuc138\u005Cuc694!\u0022, \u0022privacy\u0022: \u0022public\u0022, \u0022owner\u0022: \u0022\u005Cud504\u005Cub808\u005Cuc9c0 \u005Cucf54\u005Cub9ac\u005Cuc544\u0022, \u0022title\u0022: \u0022\u005Cud504\u005Cub808\u005Cuc9c0\u005Cub780?\u0022, \u0022oid\u0022: \u00221cn6ucikwqq_\u0022}'),
+            JSON.parse('{\u0022isBrowser64Bit\u0022: true, \u0022putmaId\u0022: \u0022ffef9a74\u002Dd2f5\u002D11e6\u002D826e\u002D22000b4085d7\u0022, \u0022isBrowserFirefox\u0022: false, \u0022oid\u0022: null, \u0022ownerOid\u0022: \u0022yohsqqk_js1h\u0022, \u0022browserName\u0022: \u0022Chrome\u0022, \u0022ownership\u0022: \u0022shared\u0022, \u0022osVersion\u0022: \u002210.10.5\u0022, \u0022browserVersion\u0022: \u002258.0.3029\u0022, \u0022osName\u0022: \u0022Mac OS X\u0022, \u0022browserMajor\u0022: 58, \u0022ipAddress\u0022: \u0022103.243.200.16\u0022}'),
+            appData
+        );
+
+        if (webglViewerApp.Main.isWebGLContextAvailable()) {
+            var scriptTag = document.createElement("script");
+            scriptTag.src = "https://d3l6c3sl8nwl6g.cloudfront.net/5.3.3-build_41/e732972f/viewer-loader.js";
+            scriptTag.crossOrigin = "anonymous";
+            scriptTag.onload = scriptTag.onreadystatechange = function() {
+                webglViewerApp.Main.startAppOnElement($("#webgl-viewer-app-container").get(0));
+                scriptTag.onload = scriptTag.onreadystatechange = null;
+            };
+            document.head.appendChild(scriptTag);
+        } else {
+            if (!appData.autofallbackToFlash) {
+                var flashmessageblock = document.getElementById('min_flash_alert');
+                if (flashmessageblock) {
+                    flashmessageblock.style.display = 'block';
+                }
+            } else {
+                webglViewerApp.Main.requestFallbackToFlashNoWebGLContextAvailable();
+            }
+        }
+
+    </script>
+
+    
+    <!-- Google Code for Prezi Embed Viewers -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1001687149;
+    var google_conversion_label = "S8hUCJOCjwgQ7ZDS3QM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="./conversion.js" crossorigin="anonymous"></script>
+    <noscript>
+    &lt;div style="display:inline;"&gt;
+    &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1001687149/?value=0&amp;amp;label=S8hUCJOCjwgQ7ZDS3QM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+    &lt;/div&gt;
+    </noscript>
+    <!-- /Google Code -->
+    
+    
+
+</body></html>

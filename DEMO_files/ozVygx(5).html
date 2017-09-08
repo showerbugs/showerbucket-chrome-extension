@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://s.codepen.io/cobra_winfrey/fullembedgrid/ozVygx?type=embed&animations=run -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - #govote</title>
+  <link href="./css(1)" rel="stylesheet">
+<link href="./css(2)" rel="stylesheet">
+<link rel="stylesheet" href="./font-awesome.min.css">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+      <style>
+      body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #a1d1fa;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+body:before, body:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: #352a1c;
+}
+body:before {
+  box-shadow: inset 0px 10px 150px #241d13;
+}
+body:after {
+  bottom: auto;
+  top: 0;
+  z-index: -1;
+  background: -webkit-radial-gradient(bottom ellipse, #ffffff 0%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(ellipse at bottom, #ffffff 0%, rgba(0, 0, 0, 0) 100%);
+}
+body .ballotwrap {
+  position: absolute;
+  width: 300px;
+  height: calc(50% - 85px);
+  overflow: hidden;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+body .ballotwrap .ballot {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  background: #ffffff;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -300px;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+body .ballotwrap .ballot:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10px;
+  width: 100%;
+  background: #ce0010;
+}
+body .ballotwrap .ballot h1 {
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  background: #085394;
+  margin-top: 0px;
+  padding: 0.5em 0;
+  letter-spacing: 0.25em;
+}
+body .ballotwrap .ballot span {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  color: #231f20;
+  font-family: "Dosis";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+body .ballotwrap .ballot i {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2.5px;
+}
+body .container {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+body .container #cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-20deg);
+          transform: rotateX(-20deg);
+  box-shadow: 0px 150px 150px 20px rgba(0, 0, 0, 0.5);
+}
+body .container #cube .front {
+  -webkit-transform: rotateY(0deg) translateZ(200px) translateX(-2px);
+          transform: rotateY(0deg) translateZ(200px) translateX(-2px);
+  background: #b0926d;
+  width: 400px;
+}
+body .container #cube .front .eye {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #352a1c;
+  left: 20%;
+  top: 20%;
+  border-radius: 100%;
+}
+body .container #cube .front .eye:nth-of-type(2) {
+  left: auto;
+  right: 20%;
+}
+body .container #cube .front .mouth {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: #352a1c;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50%;
+  border-radius: 40px 40px 40px 40px;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+body .container #cube .back {
+  -webkit-transform: rotateX(180deg) translateZ(180px);
+          transform: rotateX(180deg) translateZ(180px);
+  background: #775e40;
+}
+body .container #cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+          transform: rotateY(90deg) translateZ(200px);
+  background: #876b49;
+}
+body .container #cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+          transform: rotateY(-90deg) translateZ(200px);
+  background: #876b49;
+}
+body .container #cube .top {
+  -webkit-transform: rotateX(90deg) translateZ(100px) translateY(222.5px) translateX(23px);
+          transform: rotateX(90deg) translateZ(100px) translateY(222.5px) translateX(23px);
+  background: #a7865c;
+  height: 140px;
+  width: 350px;
+}
+body .container #cube .top2 {
+  -webkit-transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(15px);
+          transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(15px);
+  background: #a7865c;
+  height: 160px;
+  width: 366px;
+}
+body .container #cube .top3, body .container #cube .top4 {
+  -webkit-transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(2px);
+          transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(2px);
+  background: #a7865c;
+  height: 190px;
+  width: 70px;
+}
+body .container #cube .top4 {
+  -webkit-transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(323px);
+          transform: rotateX(90deg) translateZ(100px) translateY(-23px) translateX(323px);
+}
+body .container #cube figure {
+  margin: 0;
+  width: 396px;
+  height: 196px;
+  display: block;
+  position: absolute;
+  z-index: 3;
+}
+body .container #cube figure div {
+  z-index: 3;
+}
+body .container #cube figure h1 {
+  font-size: 5em;
+  font-family: "Oswald", sans-serif;
+  color: #b0926d;
+  letter-spacing: 0.25em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: 7.5px;
+  -webkit-transform: translateX(-50%) translateY(-100%);
+          transform: translateX(-50%) translateY(-100%);
+}
+body.wink .murica {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  opacity: 1;
+}
+body.wink .ballotwrap .ballot {
+  -webkit-animation: drop 1s ease-in-out forwards;
+          animation: drop 1s ease-in-out forwards;
+}
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(275%);
+            transform: translateX(-50%) translateY(275%);
+  }
+}
+@keyframes drop {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(275%);
+            transform: translateX(-50%) translateY(275%);
+  }
+}
+body.wink .container #cube .front .mouth {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+  height: 60px;
+  border-radius: 10px 10px 50px 50px;
+}
+body.wink .container #cube .front .eye:nth-of-type(1) {
+  -webkit-animation: wink 0.3s ease-in-out 1;
+          animation: wink 0.3s ease-in-out 1;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+@-webkit-keyframes wink {
+  0% {
+    -webkit-transform: scaleY(1) scaleX(1);
+            transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.2) scaleX(1.4);
+            transform: scaleY(0.2) scaleX(1.4);
+  }
+  100% {
+    -webkit-transform: scaleY(1) scaleX(1);
+            transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes wink {
+  0% {
+    -webkit-transform: scaleY(1) scaleX(1);
+            transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.2) scaleX(1.4);
+            transform: scaleY(0.2) scaleX(1.4);
+  }
+  100% {
+    -webkit-transform: scaleY(1) scaleX(1);
+            transform: scaleY(1) scaleX(1);
+  }
+}
+body #grad {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body #grad:after, body #grad:before {
+  content: '';
+  position: absolute;
+  background: -webkit-linear-gradient(left, transparent 50%, black 50%, black), -webkit-linear-gradient(8deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(23deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(38deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(53deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(68deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(83deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(98deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(113deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(128deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(143deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(158deg, transparent 50%, #12E0DB 50%, #12E0DB), -webkit-linear-gradient(173deg, transparent 50%, #000000 50%, #000000), -webkit-linear-gradient(right, transparent 50%, #12E0DB 50%, #12E0DB);
+  background: linear-gradient(90deg, transparent 50%, black 50%, black), linear-gradient(82deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(67deg, transparent 50%, #000000 50%, #000000), linear-gradient(52deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(37deg, transparent 50%, #000000 50%, #000000), linear-gradient(22deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(7deg, transparent 50%, #000000 50%, #000000), linear-gradient(-8deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(-23deg, transparent 50%, #000000 50%, #000000), linear-gradient(-38deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(-53deg, transparent 50%, #000000 50%, #000000), linear-gradient(-68deg, transparent 50%, #12E0DB 50%, #12E0DB), linear-gradient(-83deg, transparent 50%, #000000 50%, #000000), linear-gradient(-90deg, transparent 50%, #12E0DB 50%, #12E0DB);
+  background-position: 0% 0%;
+  background-size: 200% 100%;
+  height: 100%;
+  width: 50%;
+}
+body :before {
+  left: 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+body .murica {
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  width: 150vw;
+  height: 150vw;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  -webkit-animation: rotating 20s linear infinite;
+          animation: rotating 20s linear infinite;
+}
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(0deg);
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(0deg);
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+body .murica:after, body .murica:before {
+  content: '';
+  position: absolute;
+  background: -webkit-linear-gradient(left, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(8deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(23deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(38deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(53deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(68deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(83deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(98deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(113deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(128deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(143deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(158deg, transparent 50%, #ffffff 50%, #ffffff), -webkit-linear-gradient(173deg, transparent 50%, #ce0010 50%, #ce0010), -webkit-linear-gradient(right, transparent 50%, #ffffff 50%, #ffffff);
+  background: linear-gradient(90deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(82deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(67deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(52deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(37deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(22deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(7deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(-8deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(-23deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(-38deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(-53deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(-68deg, transparent 50%, #ffffff 50%, #ffffff), linear-gradient(-83deg, transparent 50%, #ce0010 50%, #ce0010), linear-gradient(-90deg, transparent 50%, #ffffff 50%, #ffffff);
+  background-position: 0% 0%;
+  background-size: 200% 100%;
+  height: 100%;
+  width: 50%;
+  box-shadow: inset -5px 0px #ffffff, inset 5px 0px #ffffff;
+}
+body .murica:before {
+  left: 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" class="wink">
+
+  
+<div class="murica">
+</div>
+<div class="ballotwrap">
+  <div class="ballot">
+    <h1>BALLOT</h1>
+    <p>
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i> Ken Bone</span>
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i> Harambe</span>
+      <span><i class="fa fa-circle" aria-hidden="true"></i> Bernard Sanders</span>
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i> Treat Williams</span>
+    </p>
+  </div>
+  </div>
+<section class="container">
+  <div id="cube">
+    <figure class="front">
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </figure>
+    <figure class="back"></figure>
+    <figure class="right"></figure>
+    <figure class="left"></figure>
+    <figure class="top"><h1>HERE</h1></figure>
+    <figure class="top2"><h1>VOTE</h1></figure>
+    <figure class="top3"></figure>
+    <figure class="top4"></figure>
+  </div>
+</section>
+
+    <script src="./stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  <script src="./jquery.min.js"></script>
+
+    <script>
+    var $post = $("body");
+
+setInterval(function(){
+    $post.toggleClass("wink");
+}, 2000);
+
+node = document.body;
+node.insertAdjacentHTML('afterend', '<div style="display:block; z-index:999; transform:translateZ(10000px)"><p style="position:fixed; right:10px; bottom:80px; font-size:10px; color:#fff; text-transform:uppercase; max-width:100px; text-align:center; letter-spacing:3px;">From your friends at</p><a target="blank" href="http://bigseadesign.com" style="position:fixed; bottom:0; right:10px; width:100px; height:80px; background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/bigsealogo_bluegrey.png); background-size:contain; background-repeat:no-repeat;"></a></div>');
+  //# sourceURL=pen.js
+  </script>
+
+  
+  
+
+
+
+ </body><head></head><body><div style="display:block; z-index:999; transform:translateZ(10000px)"><p style="position:fixed; right:10px; bottom:80px; font-size:10px; color:#fff; text-transform:uppercase; max-width:100px; text-align:center; letter-spacing:3px;">From your friends at</p><a target="blank" href="http://bigseadesign.com/" style="position:fixed; bottom:0; right:10px; width:100px; height:80px; background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/bigsealogo_bluegrey.png); background-size:contain; background-repeat:no-repeat;"></a></div></body></html>
